@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="BOTW and TOTK Fashion - View armor colors">
+	<meta name="author" content="Matthew Nohr">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+	<link rel="manifest" href="img/manifest.json">
+	<meta name="msapplication-TileColor" content="#01b3d9">
+	<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+	<meta name="theme-color" content="#01b3d9">
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url"  content="http://botwtotk.fashion" />
+	<meta property="og:type" content="game" />
+	<meta property="og:title" content="BOTW/TOTK Fashion" />
+	<meta property="og:description" content="See what your armor will look like without visiting the dye shop." />
+	<meta property="og:image" content="http://botw.fashion/img/social-logo.png" />
+	<meta property="fb:app_id" content="1151957371575913" />
+
+	<title>BOTW/TOTK Fashion</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom styles for this template -->
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/custom-navbar.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Custom Scripts -->
+	<script src="js/armors.js"></script>
+	<script src="js/colors.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/colorChange.js"></script>
+	<script src="js/sharing.js"></script>
+	<script src="js/analyticsHelper.js"></script>
+	<script> window.addEventListener('load', randomizeAll);</script>
+	</head>
+
+	<body>
+
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<span class="navbar-brand">
+					<img src="img/logo-navbar.jpg" />
+				</span>
+				<span class="navbar-brand">
+					BOTW/TOTK Fashion
+				</span>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse navbar-right">
+				<a href="https://www.twitter.com/matthewnohr" class="btn btn-primary navbar-btn" onclick="trackMyTwitter();">
+					<i class="fa fa-twitter"></i>
+				</a>
+				<a href="https://github.com/mrnohr/botw-armor" class="btn btn-primary navbar-btn">
+					<i class="fa fa-github"></i> Fork Me
+				</a>
+				<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CNFGEMAHKW96A" class="btn btn-success navbar-btn" onclick="trackDonate();">
+					<i class="fa fa-beer"></i> Donate
+				</a>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container">
+		<!-- Intro text -->
+		<div class="page-header">
+			<h1>Breath of the Wild/Tears of the Kingdom Fashion</h1>
+		</div>
+		<p class="lead">
+			See what your armor will look like without visiting the
+			<a href="http://zelda.wikia.com/wiki/Kochi_Dye_Shop" target="_blank">dye shop</a>.
+		</p>
+
+		<!-- Change all -->
+		<div class="row ">
+			<div class="col-xs-2 col-sm-1"> </div>
+			<div class="col-xs-8 col-sm-4">
+				<select id="allSet" onchange="allSetChanged();" class="form-control"></select>
+				<select id="allColor" onchange="allColorChanged();" class="form-control"></select>
+			</div>
+		</div>
+		<div class="row">&nbsp;</div>
+
+		<!-- Randomize -->
+		<div class="row">
+			<div class="col-xs-2 col-sm-1"> </div>
+			<div class="col-xs-8 col-sm-4">
+				<button class="btn btn-info btn-block" onclick="randomizeAll();">
+					Randomize
+				</button>
+			</div>
+		</div>
+
+		<div class="row">&nbsp;</div>
+
+		<!-- Head -->
+		<div class="row row-space">
+			<div class="col-xs-2 col-sm-1 text-right">
+				<div class="row">
+					<button onclick="headSetBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="headColorBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs-8 col-sm-4">
+				<img id="headImg" class="img-responsive"/>
+			</div>
+			<div class="col-xs-2 col-sm-1">
+				<div class="row">
+					<button onclick="headSetNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="headColorNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-sm-2 hidden-xs">
+				<div class="row">
+					<select id="headSet" onchange="headChanged();" class="form-control"></select>
+				</div>
+				<div class="row">
+					<select id="headColor" onchange="headChanged();" class="form-control"></select>
+				</div>
+			</div>
+		</div>
+
+		<!-- Body -->
+		<div class="row row-space">
+			<div class="col-xs-2 col-sm-1 text-right">
+				<div class="row">
+					<button onclick="bodySetBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="bodyColorBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs-8 col-sm-4">
+				<img id="bodyImg" src="images/hylian/blue-body.png" class="img-responsive"/>
+			</div>
+			<div class="col-xs-2 col-sm-1">
+				<div class="row">
+					<button onclick="bodySetNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="bodyColorNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-sm-2 hidden-xs">
+				<div class="row">
+					<select id="bodySet" onchange="bodyChanged();" class="form-control"></select>
+				</div>
+				<div class="row">
+					<select id="bodyColor" onchange="bodyChanged();" class="form-control"></select>
+				</div>
+			</div>
+		</div>
+
+		<!-- Legs -->
+		<div class="row row-space">
+			<div class="col-xs-2 col-sm-1 text-right">
+				<div class="row">
+					<button onclick="legsSetBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="legsColorBack()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs-8 col-sm-4">
+				<img id="legsImg" src="images/hylian/blue-legs.png" class="img-responsive"/>
+			</div>
+			<div class="col-xs-2 col-sm-1">
+				<div class="row">
+					<button onclick="legsSetNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="row">
+					<button onclick="legsColorNext()" class="btn btn-default">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-sm-2 hidden-xs">
+				<div class="row">
+					<select id="legsSet" onchange="legsChanged();" class="form-control"></select>
+				</div>
+				<div class="row">
+					<select id="legsColor" onchange="legsChanged();" class="form-control"></select>
+				</div>
+			</div>
+		</div>
+        <div class="row visible-xs">
+            <div class="col-xs-2 col-sm-1"> </div>
+            <div class="col-xs-8 col-sm-4">
+                <p>
+                    <span id="comboNameHead">Blue Hylian</span><br/>
+                    <span id="comboNameBody">Blue Hylian</span><br/>
+                    <span id="comboNameLegs">Blue Hylian</span>
+                </p>
+            </div>
+        </div>
+
+		<br>
+
+		<!-- Updates -->
+		<div class="panel panel-success">
+			<div class="panel-heading">
+				<h2 class="panel-title">Latest Updates</h2>
+			</div>
+			<div class="panel-body">
+				<p><strong>All Tears of the Kingdom armor has been added!</strong> You can now browse every single armor piece to your 
+				heart's content in both Breath of the Wild and Tears of the Kingdom!</p>
+        		<p>Stay fashionable!</p>
+        		<h4>Changes</h4>
+				<a data-toggle="collapse" href="#collapse100" aria-expanded="false" aria-controls="collapse100">v10.0</a><br/>
+				<div class="collapse" id="collapse100">
+					<ul>
+						<li>TOTK armor added</li>
+						<li>Well Worn and Archaic are now considered full sets with the default head</li>
+						<li>TOTK information resources added</li>
+						<li>Website updated to reflect new changes</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse90" aria-expanded="false" aria-controls="collapse90">v9.0</a><br/>
+				<div class="collapse" id="collapse90">
+					<ul>
+						<li>DLC 2 Armor!</li>
+						<li>Phantom Ganon set</li>
+						<li>Royal Guard set</li>
+						<li>Ravio and Zant helmets</li>
+						<li>Island Lobster shirt</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse80" aria-expanded="false" aria-controls="collapse80">v8.0</a><br/>
+				<div class="collapse" id="collapse80">
+					<ul>
+						<li>Champion Amiibo Armor helms</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse70" aria-expanded="false" aria-controls="collapse70">v7.0</a><br/>
+				<div class="collapse" id="collapse70">
+					<ul>
+						<li>Salvager (Xenoblade Chronicles 2) Armor</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse60" aria-expanded="false" aria-controls="collapse60">v6.0</a><br/>
+				<div class="collapse" id="collapse60">
+					<ul>
+						<li>DLC Armor</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse50" aria-expanded="false" aria-controls="collapse50">v5.0</a><br/>
+				<div class="collapse" id="collapse50">
+					<ul>
+						<li>Randomize Button!</li>
+						<li>Add Shiek's Mask (missed in Amiibo update)</li>
+						<li>Show armor/color names on mobile</li>
+						<li>Make armor order match one of the sort orders in the game</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse40" aria-expanded="false" aria-controls="collapse40">v4.0</a><br/>
+				<div class="collapse" id="collapse40">
+					<ul>
+						<li>Add all the Amiibo Sets</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse30" aria-expanded="false" aria-controls="collapse30">v3.0</a><br/>
+				<div class="collapse" id="collapse30">
+					<ul>
+						<li>Add "Night" version of Radiant</li>
+						<li>Add Warm Doublet</li>
+						<li>Add Dark Link</li>
+						<li>Add Monster masks (x4)</li>
+						<li>Add Jewelry (x7)</li>
+					</ul>
+				</div>
+				<a data-toggle="collapse" href="#collapse20" aria-expanded="false" aria-controls="collapse20">v2.0</a>
+				<div class="collapse" id="collapse20">
+					<ul>
+						<li>Add Sharing</li>
+						<li>Add Sand Boots and Snow Boots</li>
+						<li>Add Champion's Tunic</li>
+						<li>Add "Original" color</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- About text -->
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h2 class="panel-title">About</h2>
+			</div>
+			<div class="panel-body">
+				<h3>What is this?</h3>
+				<p>In The Legend of Zelda: Breath of the Wild and Tears of the Kingdom, you can find/earn armor throughout the game. There is also
+					a <a href="https://www.zeldadungeon.net/wiki/Kochi_Dye_Shop">shop</a> in the game where you can go
+					to change the color of your armor.</p>
+				<p>However, this process is fairly painful. You have to dye your head, body, and leg armor all at
+					once. If you want to dye pieces different colors, you'll have to use your imagination to think of
+					how it will look.</p>
+				<p>This tool lets you get an idea of what color combinations will look like, without having to go to
+					the dye shop. I wanted this so I could pick something that looked good, and then went to the shop
+					in the game, knowing what I was going to get.</p>
+				<p>	*Please note that the Ancient Hero's Aspect has a different ratio to all other photos due to it being a full
+					armor piece. It can be put with other items of clothing on this website, however this is just for fun, and is 
+					not possible in game. The Wild armor can also be died in BOTW but not TOTK.</p>
+
+				<h3>Additional Information</h3>
+				<ul>
+					<li><a href="https://www.zeldadungeon.net/wiki/index.php?title=Kochi_Dye_Shop">List of dye ingredients</a></li>
+					<li><a href="https://www.zeldadungeon.net/wiki/Breath_of_the_Wild_Armor">List of armor (Breath of the Wild)</a></li>
+					<li><a href="https://www.zeldadungeon.net/wiki/Tears_of_the_Kingdom_Armor">List of armor (Tears of the Kingdom)</a></li>
+				</ul>
+
+				<h3>About This Site</h3>
+				<p> Hello! This is an updated version of the original botw.fashion site which adds everything from the next game in 
+					the series, Tears of the Kingdom! All code used was modified from the original developer(s), and all links and other
+					paragraphs are also from them. I just simply updated it. Please go support the original creator(s) for all their 
+					work on this project!
+				</p>
+				<p>---</p>
+				<p>To create the images I used the screenshot feature on the Switch and then wrote a script to crop
+					all the pictures. All the images (uncropped and cropped) are available on
+                    <a href="https://github.com/mrnohr/botw-armor">GitHub</a>.</p>
+				<p>This site is open-source (MIT License) so you can fork/modify it as needed. If you do, I'd love to
+					know what you are doing.</p>
+				<p>If you find any issues or have any suggestions, please use
+					<a href="https://github.com/mrnohr/botw-armor/issues">GitHub's issue tracking system</a>.</p>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="6WT5D9DS7W9UL">
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                </form>
+			</div>
+		</div>
+	</div><!-- /.container -->
+
+	<!-- Footer -->
+	<nav class="navbar navbar-default navbar-bottom">
+		<div class="container">
+			<p class="navbar-text">&copy; 2017
+				<a href="http://www.twitter.com/matthewnohr" class="navbar-link" onclick="trackMyTwitter()">Matthew Nohr</a>
+			</p>
+		</div>
+	</nav>
+
+	<!-- Custom JavaScript -->
+	<script>
+		init();
+		checkForShare();
+	</script>
+
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Google Analytics -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BMCV2FM3V"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-8BMCV2FM3V');
+	</script>
+
+  </body>
+</html>
