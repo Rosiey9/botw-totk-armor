@@ -3,7 +3,7 @@ Manage color combinations of armor in BOTW and TOTK
 
 ## Website
 
-Use this tool here: http://botwtotk.fashion
+Use this tool here: https://fashion-tool.github.io/botw-totk-armor/
 
 ## What is this?
 
