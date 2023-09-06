@@ -13,7 +13,7 @@ However, this process is fairly painful. You have to dye your head, body, and le
 
 This tool lets you get an idea of what color combinations will look like, without having to go to the dye shop. I wanted this so I could pick something that looked good, and then went to the shop in the game, knowing what I was going to get.
 
-*Please note that the Ancient Hero's Aspect has a different ratio to all other photos due to it being a full armor piece. It can be put with other items of clothing on this website, however this is just for fun, and is not possible in game. The Wild armor can also be died in BOTW but not TOTK.
+*Please note that the Ancient Hero's Aspect has a different ratio to all other photos due to it being a full armor piece. It can be put with other items of clothing on this website, however this is just for fun, and is not possible in game. The Wild armor can also be dyed in BOTW but not TOTK.
 
 ## Additional Information
 
