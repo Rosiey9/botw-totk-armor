@@ -80,8 +80,8 @@ class CropImage {
 
     // Entry point for script execution
     static void main(String[] args) {
-        File inputFile = new File("D:\\Other\\Code\\raw\\unequipped-t\\head.jpg")
-        File outputDir = new File("D:\\Other\\Code\\docs\\images\\unequipped-t")
+        File inputFile = new File("") //insert input file path location between quotations
+        File outputDir = new File("") //insert output path location between quotations
         CropImage cropImage = new CropImage(inputFile, outputDir)
         cropImage.cropImage()
     }
